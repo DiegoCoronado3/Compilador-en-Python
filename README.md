@@ -143,4 +143,4 @@ El proyecto incluye varios programas de ejemplo en la carpeta `programas/`:
 
 ## Licencia
 
-Proyecto académico - Todos los derechos reservados.
+Proyecto académico - Elaborado por Diego Coronado Perez.
