@@ -1,78 +1,80 @@
 # 🐍 Compilador Cascabel
 
-## Descripción General
+# Cascabel Compiler Documentation
 
-Compilador para el lenguaje **Cascabel**, un lenguaje de programación educativo desarrollado en Python. El compilador realiza análisis léxico, sintáctico, semántico y generación de código Python.
+## Overview
 
-## Características
+Compiler for the **Cascabel** programming language, an educational language developed in Python. The compiler performs lexical analysis, syntactic analysis, semantic analysis, and Python code generation.
 
-- **Lenguaje educativo**: Diseñado con propósitos didácticos
-- **Compilación completa**: Incluye todas las etapas de un compilador tradicional
-- **Generación de código Python**: Produce código ejecutable en Python
-- **Manejo de errores**: Reporte detallado de errores léxicos, sintácticos y semánticos
-- **Tabla de símbolos**: Seguimiento de variables y sus tipos
+## Features
 
-## Estructura del Proyecto
+- **Educational language**: Designed for teaching purposes
+- **Complete compilation**: Includes all traditional compiler stages
+- **Python code generation**: Produces executable Python code
+- **Error handling**: Detailed reporting of lexical, syntactic, and semantic errors
+- **Symbol table**: Tracks variables and their types
+
+## Project Structure
 
 ```
-compilador-cascabel/
+cascabel-compiler/
 │
-├── AnalizadorLexico.py      # Analizador léxico
-├── AnalizadorSintactico.py  # Analizador sintáctico
-├── AnalizadorSemantico.py   # Analizador semántico
-├── Arbol.py                 # Estructura del árbol sintáctico
-├── GeneradorDeCodigo.py     # Generador de código Python
-├── main.py                  # Programa principal
-└── programas/               # Directorio con programas de ejemplo
+├── AnalizadorLexico.py      # Lexical analyzer
+├── AnalizadorSintactico.py  # Syntactic analyzer
+├── AnalizadorSemantico.py   # Semantic analyzer
+├── Arbol.py                 # Abstract syntax tree structure
+├── GeneradorDeCodigo.py     # Python code generator
+├── main.py                  # Main program
+└── programas/               # Directory with example programs
 ```
 
-## Componentes Principales
+## Main Components
 
-### 1. Analizador Léxico (`AnalizadorLexico.py`)
-Define los tokens del lenguaje Cascabel usando RPLY:
-- Palabras reservadas: `programa`, `si`, `sino`, `mientras`, `para`, etc.
-- Tipos de datos: `entero`, `real`, `bool`, `cadena`
-- Literales: cadenas, números reales, enteros, booleanos
-- Operadores: aritméticos, de comparación, booleanos
-- Identificadores y símbolos especiales
+### 1. Lexical Analyzer (`AnalizadorLexico.py`)
+Defines Cascabel language tokens using RPLY:
+- Reserved words: `programa`, `si`, `sino`, `mientras`, `para`, etc.
+- Data types: `entero`, `real`, `bool`, `cadena`
+- Literals: strings, real numbers, integers, booleans
+- Operators: arithmetic, comparison, boolean
+- Identifiers and special symbols
 
-### 2. Analizador Sintáctico (`AnalizadorSintactico.py`)
-Implementa la gramática del lenguaje usando RPLY y construye el árbol sintáctico abstracto (AST). Define producciones para:
-- Estructuras de control: `si`, `mientras`, `para`
-- Declaraciones y asignaciones de variables
-- Expresiones aritméticas y booleanas
-- Entrada/salida: `lee`, `escribe`
+### 2. Syntactic Analyzer (`AnalizadorSintactico.py`)
+Implements the language grammar using RPLY and builds the abstract syntax tree (AST). Defines productions for:
+- Control structures: `si`, `mientras`, `para`
+- Variable declarations and assignments
+- Arithmetic and boolean expressions
+- Input/output: `lee`, `escribe`
 
-### 3. Analizador Semántico (`AnalizadorSemantico.py`)
-Realiza verificaciones de tipo y uso correcto de variables:
-- Comprobación de tipos en asignaciones
-- Verificación de condiciones en estructuras de control
-- Detección de variables no declaradas
-- Compatibilidad de tipos en operaciones
+### 3. Semantic Analyzer (`AnalizadorSemantico.py`)
+Performs type checking and correct variable usage verification:
+- Type checking in assignments
+- Condition verification in control structures
+- Detection of undeclared variables
+- Type compatibility in operations
 
-### 4. Generador de Código (`GeneradorDeCodigo.py`)
-Traduce el AST a código Python ejecutable:
-- Conversión de estructuras de control de Cascabel a Python
-- Manejo de tipos de datos
-- Generación de código con formato adecuado
+### 4. Code Generator (`GeneradorDeCodigo.py`)
+Translates the AST into executable Python code:
+- Conversion of Cascabel control structures to Python
+- Data type handling
+- Properly formatted code generation
 
-### 5. Programa Principal (`main.py`)
-Orquesta el proceso de compilación completo con interfaz de usuario:
-- Selección de etapa de compilación
-- Visualización de tokens, AST y código generado
-- Ejecución del programa resultante
+### 5. Main Program (`main.py`)
+Orchestrates the complete compilation process with user interface:
+- Compilation stage selection
+- Display of tokens, AST, and generated code
+- Execution of the resulting program
 
-## Lenguaje Cascabel - Especificación
+## Cascabel Language Specification
 
-### Palabras Reservadas
-- `programa`: Inicio del programa
-- `si`, `sino`, `entonces`: Condicionales
-- `mientras`: Ciclos while
-- `para`, `desde`, `hasta`: Ciclos for
-- `lee`, `escribe`: Entrada/salida
-- `entero`, `real`, `bool`, `cadena`: Tipos de datos
+### Reserved Words
+- `programa`: Program start
+- `si`, `sino`, `entonces`: Conditionals
+- `mientras`: While loops
+- `para`, `desde`, `hasta`: For loops
+- `lee`, `escribe`: Input/output
+- `entero`, `real`, `bool`, `cadena`: Data types
 
-### Sintaxis Básica
+### Basic Syntax
 
 ```cascabel
 programa {
@@ -100,47 +102,46 @@ programa {
 }
 ```
 
-## Instalación y Uso
+## Installation and Usage
 
-### Requisitos
+### Requirements
 - Python 3.6+
-- Librerías: `rply`, `nltk`
+- Libraries: `rply`, `nltk`
 
-### Instalación de Dependencias
+### Dependency Installation
 ```bash
 pip install rply nltk
 ```
 
-### Ejecución
+### Execution
 ```bash
 python main.py
 ```
 
-### Uso del Compilador
-1. Ejecute `main.py`
-2. Ingrese el nombre del archivo fuente (ej. `holamundo.casc`)
-3. Seleccione la etapa de compilación deseada:
-   - 1: Solo análisis léxico
-   - 2: Análisis léxico y sintáctico
-   - 3: Análisis léxico, sintáctico y semántico
-   - 4: Generación de código
-   - 5: Compilación completa y ejecución
+### Compiler Usage
+1. Execute `main.py`
+2. Enter the source filename (e.g., `holamundo.casc`)
+3. Select the desired compilation stage:
+   - 1: Lexical analysis only
+   - 2: Lexical and syntactic analysis
+   - 3: Lexical, syntactic, and semantic analysis
+   - 4: Code generation
+   - 5: Complete compilation and execution
 
-## Ejemplos
+## Examples
 
-El proyecto incluye varios programas de ejemplo en la carpeta `programas/`:
-- `holamundo.casc`: Programa "Hola mundo"
-- `calculadora.casc`: Ejemplo con operaciones aritméticas
-- `condicionales.casc`: Demo de estructuras condicionales
-- `ciclos.casc`: Ejemplos de bucles
+The project includes several example programs in the `programas/` folder:
+- `holamundo.casc`: "Hello world" program
+- `calculadora.casc`: Example with arithmetic operations
+- `condicionales.casc`: Demo of conditional structures
+- `ciclos.casc`: Loop examples
 
-## Limitaciones
+## Limitations
 
-- Lenguaje con fines educativos, no para producción
-- Alcance limitado de funcionalidades
-- Algunas restricciones en la implementación de características del lenguaje
+- Educational language, not for production use
+- Limited functionality scope
+- Some restrictions in language feature implementation
 
+## License
 
-## Licencia
-
-Proyecto académico - Elaborado por Diego Coronado Perez.
+Academic project - Developed by Diego Coronado Perez.
