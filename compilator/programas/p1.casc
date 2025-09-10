@@ -1,0 +1,17 @@
+programa {
+
+    escribe "Por favor, ingrese su nombre:";
+    cadena nmbre;
+    lee nmbre;
+    
+
+    escribe "Por favor, ingrese su año de nacimiento:";
+    entero nacimiento;
+    lee nacimiento;
+    
+
+    entero edad = 2025 - nacimiento;
+    
+
+    escribe "Su nombre es $nmbre y su edad es $edad años";
+}

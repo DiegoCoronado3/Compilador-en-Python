@@ -1,0 +1,27 @@
+programa
+entero real cadena bool
+{}()
++ - * /
+== <= >= > < =
+o y no 
+mientras
+si
+sino
+entonces
+para
+desde
+hasta
+"hola mundo!"
+"atención! esta es una cadena"
+"esta también es una cadena 4%21$"
+"hola $nombreUsuario"
+""
+"hola \"amigo\""
+324 1 -49 0 -21
+0.45 99.013 -100.0 -25.9124
+Verdadero Falso
+lee escribe
+variable1 vARIAble2_nueva nombre_us_
+;
+#este es un comentarios
+#est3 también es comentario %·?

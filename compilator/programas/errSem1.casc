@@ -1,0 +1,27 @@
+#programa con errores semánticos
+
+programa {
+  cadena msj;
+  cadena msj2= 5;
+  #ERROR: el valor de msj2 debería ser una cadena
+  msj = 8;
+  #ERROR: el valor de msj debería ser una cadena
+  entero a = Verdadero;
+  #ERROR: el valor de a debería ser un entero
+  bool b = Verdadero;
+  entero c = 99;
+  a = b+c;
+  #ERROR: el operador + solo se puede aplicar a valores numéricos
+  real n = 0.0;
+  a = 1;
+  #ERROR: el valor esperado de n es real, sin embargo a+c es entero
+  n = a+c;
+  n = c-b;
+  m = a+c;
+  #ERROR: El valor de la condicionante debe ser booleano, pero c es entero
+  mientras c {
+    escribe "Hola mundo!";
+    #ERROR: la variable var1 no ha sido declarada
+    var1 = 34.5;
+  }
+}

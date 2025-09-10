@@ -1,0 +1,16 @@
+ programa{
+    cadena nombre;
+    escribe "Por favor, ingrese su nombre:";
+    lee nombre;
+    entero anioNacimiento = 20;
+    escribe "Por favor, ingrese su año de nacimiento:";
+    lee anioNacimiento;
+    entero anioActual = 2000;
+    anioActual = anioActual+25;
+    mientras anioNacimiento > anioActual {
+     escribe "ERROR: El año de nacimiento no puede ser mayor que $anioActual";
+     lee anioNacimiento;
+    }
+    entero edad = anioActual-anioNacimiento;
+    escribe "Estimado $nombre, actualmente tu edad es $edad";
+ }

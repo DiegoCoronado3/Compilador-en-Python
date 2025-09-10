@@ -1,0 +1,18 @@
+programa {
+  entero cantidad = 0;
+  entero suma = 0;
+  entero numero = 0;
+  entero i = 0;
+
+  escribe "¿Cuántos números vas a sumar?";
+  lee cantidad;
+
+  para i desde 1 hasta cantidad {
+    escribe "Ingresa un número:";
+    lee numero;
+    suma = suma + numero;
+  }
+
+  escribe "La suma total es:";
+  escribe suma;
+}

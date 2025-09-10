@@ -1,0 +1,16 @@
+programa {
+    entero a;
+    entero b;
+    real promedio;
+    bool aprobado;
+
+    a = 8;
+    b = 9;
+    promedio = (a + b) / 2;
+
+    si promedio >= 6.0 entonces {
+        aprobado = verdadero;
+    } sino {
+        aprobado = falso;
+    }
+}

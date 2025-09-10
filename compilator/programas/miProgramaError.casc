@@ -1,0 +1,10 @@
+programa {
+    entero x
+    real Y;
+    bool z;
+    x = 5;
+    Y = 3.14
+    si (x > Y ) entonces {
+        z = verdadero;
+    }
+}

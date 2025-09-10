@@ -1,0 +1,30 @@
+#Programa que genera los primeros N numeros de la serie de Fibonacci 
+#N es un número entero ingresado por el usuario
+
+programa{
+  entero n=0;
+  mientras n<0 o n==0 {
+    escribe "Ingresa un número mayor o igual a 1:";
+    lee n;	
+  }
+
+  escribe "Los $n primeros términos de la serie de Fibonacci son:";
+
+  escribe 1;
+  si n>2 entonces{
+    escribe 1;
+  }
+  si n>2 entonces {
+    entero fibo1=1;
+    entero fibo2=1;
+    entero fibonacci =0;
+    entero i=0;
+    para i desde 3 hasta n{
+      fibonacci = fibo1 + fibo2;
+      escribe fibonacci;
+      fibo1 = fibo2;
+      fibo2 = fibonacci;
+    }
+  }
+  escribe "fin del programa";
+}

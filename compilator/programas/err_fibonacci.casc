@@ -1,0 +1,38 @@
+#Programa que genera los primeros n numeros de la serie de Fibonacci
+#n es un número entero ingresado por el usuario
+
+programa{
+  #ERROR: "" no es un entero
+  entero n="";
+  mientras n<0 o n==0 {
+    escribe "Ingresa un número mayor o igual a 1:";
+    #La variable m no ha sido definida
+    lee m;
+  }
+
+  escribe "Los $n primeros términos de la serie de Fibonacci son:";
+
+  escribe 1;
+  si n>2 entonces{
+    escribe 1;
+  }
+  si n>2 entonces {
+    #La variable fibo1 no está definida
+    fibo1=1;
+    #ERROR: 1.0 es real
+    entero fibo2=1.0;
+    entero fibonacci =0;
+    #ERROR: True es booleano, no real
+    entero i=Verdadero;
+    entero fibon = 9;
+    cadena fibom = "hola";
+    para i desde 3 hasta n{
+      #ERROR: El operador + solo se puede aplicar a números, no a cadenas.
+      fibonacci = fibon + fibom;
+      escribe fibonacci;
+      fibo1 = fibo2;
+      fibo2 = fibonacci;
+    }
+  }
+  escribe "fin del programa";
+}

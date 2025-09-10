@@ -1,0 +1,31 @@
+# Programa que calcula el promedio de 3 calificaciones
+
+programa {
+  real promedio;
+  entero suma = 0;
+  real calificacion1 = 8.5;
+  real calificacion2 = 9.0;
+  
+  # ERROR 1: calificacion3 no está declarada antes de su uso
+  suma = calificacion1 + calificacion2 + calificacion3;
+
+  # ERROR 2: Asignar entero a una variable real (división entera da entero)
+  promedio = suma / 3;
+
+  # ERROR 3: Condición con tipo real (promedio), se espera booleano
+  si promedio entonces {
+    escribe "Aprobado";
+  }
+
+  # ERROR 4: Comparación entre cadena y número
+  si promedio > "siete" entonces {
+    escribe "Excelente";
+  }
+
+  bool aprobado = falso;
+
+  # ERROR 5: Asignar cadena a una variable booleana
+  aprobado = "sí";
+
+  escribe "Promedio: $promedio";
+}
